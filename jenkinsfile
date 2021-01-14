@@ -6,10 +6,9 @@ pipeline {
             steps {
                 echo 'executing yarn..'
                 nodejs('Node10-17'){
-                
                     sh 'yarn install'
-                
                 }
+                echo $PWD
             }
         }
         stage('run backend') {
